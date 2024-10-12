@@ -1,58 +1,121 @@
 *{
- padding:2px;
- margin:0px;
- 
+  padding:0px;
+  margin:0px;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
+body{
+     background-color:purple;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+     min-height:120vh;
+}
+root{
+    --clr-dk-grad: #8400cd;
+    --clr-lt-grad: #b800c4;
+    --clr-white: #fff;
+    --clr-grey: #e5e5e5;
+    --clr-green: #20cc44;
+    --clr-black: #000;
+}
+img{
+    width:100%;
+}
+main{
+     max-width:80vw;
+     display:grid;
+     grid-template-columns:1fr 1fr;
+     background-color:white;
+     border-radius:1.5em;
+     justify-content:center;
+     align-items:center;
+     padding:10px;
+}
+left-image{
+    display: flex;
+    place-content: center;
+    /* border-radius: 100%; */
+    overflow: hidden;
+    padding: 6em 3em;
+    width: fit-content;
+}
+
+.left-image img{
+    width: 70%;
+    border-radius: 100%;
+}
+
 form{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    padding:10px;
-    align-items:center;   
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
-input {
-		width:100%;
-		height:35px;
-		border-radius:5px;
-		outline:none;
+
+form img{
+    width: 1em;
 }
-a{
-   align-content:center;
-   color:blue;
-   /*border-bottom:1px solid grey;*/
+
+h1{
+    text-align: center;
+    padding:20px;
 }
-hr{
-   border:none;
-   background-color:grey;
-   width:100%;
-   height:1px;
+
+.email-container,
+.password-container {
+    background-color:grey;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 50px;
 }
-button{
-      background-color:green;
-      border:none;
-      padding:10px;
-      width:50%;
-      border-radius:5px;
-      color:white;
+
+.email-image,
+.password-image {
+    display: flex;
+    align-items: center;
 }
-input[type="submit"]{
-      background-color:blue;
-      color:white;
-      border:none;
-      font-size:20px;
-      font-family:sans-serif;
+
+.email-container input,
+.password-container input {
+    border: none;
+    background-color: grey;
+    padding: 15px 20px;
+    outline: none;
 }
-input:nth-child(1),
-input:nth-child(2) {
-	border: 1px solid lightgrey;
+
+input[type="submit"] {
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background-color: green;
+    color: white;
 }
-h4{
-    color:blue;
-    text-align:center;
-    font-size:30px;
-    font-family:monospace;
+
+a {
+    text-decoration: none;
+    color:black;
+    align-self: center;
 }
-h5{
-  text-align:center;
-  font-size:10px;
+
+a span {
+    color: green;
+}
+
+a:has(img) {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        grid-template-columns: auto;
+    }
+
+    input {
+        width: 100%;
+        border-radius: 50px;
+    }
 }
